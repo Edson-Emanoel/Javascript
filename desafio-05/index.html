@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="nome" value="João">
+        <input type="text" name="email" value="joao@gmail.com">
+        <input type="text" name="tel" value="+55 9 9999-9999">
+        <input type="text" name="senha" value="12312312312312">
+
+        <button id="btn">Enviar</button>
+    </form>
+
+    <script>
+        const form = document.querySelector("form")
+
+        const nome = form.nome;
+        const email = form.email;
+        const tel = form.tel;
+        const senha = form.senha;
+
+        const btn = form.btn;
+
+        function validar() {
+            console.log(
+                `Nome: ${nome.value} \n`,
+                `Email: ${email.value} \n`,
+                `Tel: ${tel.value} \n`,
+                `Senha: ${senha.value}`
+            );
+            alert("Hello")
+        }
+
+        btn.addEventListener("click", function (e){
+            e.preventDefault();
+
+            validar()
+
+            form.reset()
+        })
+
+    </script>
+
+</body>
+</html>
