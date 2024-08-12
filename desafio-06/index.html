@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Calculando V1</title>
+</head>
+<body>
+      <input type="text" class="inputA" placeholder="Valor A">
+
+      <input type="text" class="inputB" placeholder="Valor B">
+
+      <button class="mult">Multiplicar</button>
+      <button class="som">Somar</button>
+      <button class="sub">Subtrair</button>
+
+      <p class="resultP">Resultado: </p>
+
+      <script>
+            let valorA = document.querySelector(".inputA")
+            let valorB = document.querySelector(".inputB")
+            let resultP = document.querySelector(".resultP")
+            
+            let btnSoma = document.querySelector(".som")
+            let btnSub = document.querySelector(".sub")
+            let btnMult = document.querySelector(".mult")
+
+            btnSoma.addEventListener("click", function(){
+                  let soma = Number(valorA.value) + Number(valorB.value)
+
+                  resultP.textContent = soma
+            });
+
+            btnSub.addEventListener("click", function() {
+                  if (Number(valorA.value) > Number(valorB.value)) {
+                        let subtracao = Number(valorA.value) - Number(valorB.value)
+                        resultP.textContent = subtracao
+                  } else {
+                        let subtracao = Number(valorB.value) - Number(valorA.value)
+                        resultP.textContent = subtracao
+                  }
+            })
+            btnMult.addEventListener("click", function(){
+                  // console.log("A: " + valorA.value + " | B: " + valorB.value);
+                  
+                  let multiplicacao = Number(valorA.value) * Number(valorB.value)
+                  resultP.textContent = multiplicacao
+            })
+      </script>
+</body>
+</html>

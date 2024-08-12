@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Calculando - V2</title>
+</head>
+<body>
+      <p class="resultP">Resultado: </p>
+      
+      <input type="text" class="v1" placeholder="Valor A">
+      <input type="text" class="v2" placeholder="Valor B">
+
+      <button class="som">+</button>
+      <button class="mult">*</button>
+      <button class="sub">-</button>
+      <button class="div">/</button>
+
+
+      <script>
+            let rs = document.querySelector(".resultP")
+            
+            let btnSoma = document.querySelector(".som")
+            let btnSub = document.querySelector(".sub")
+            let btnMult = document.querySelector(".mult")
+            let btnDiv = document.querySelector(".div")
+
+            btnSoma.onclick = () => {
+                  let valorA = Number(document.querySelector(".v1").value)
+                  let valorB = Number(document.querySelector(".v2").value)
+                  calc = valorA + valorB
+                  rs.textContent = "Soma: " + calc
+            }
+            btnSub.onclick = () => {
+                  let valorA = Number(document.querySelector(".v1").value)
+                  let valorB = Number(document.querySelector(".v2").value)
+                  calc = valorA * valorB
+                  rs.textContent = "Subtração: " + calc
+            }
+            btnMult.onclick = () => {
+                  let valorA = Number(document.querySelector(".v1").value)
+                  let valorB = Number(document.querySelector(".v2").value)
+                  calc = valorA * valorB
+                  rs.textContent = "Multiplicação: " + calc
+            }
+            btnDiv.onclick = () => {
+                  let valorA = Number(document.querySelector(".v1").value)
+                  let valorB = Number(document.querySelector(".v2").value)
+                  calc = valorA / valorB
+                  rs.textContent = "Divisão: " + calc
+            }
+      </script>
+</body>
+</html>
