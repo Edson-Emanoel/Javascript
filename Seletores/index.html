@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Seletores</title>
+</head>
+<body>
+      <form class="modal-field">
+            <h1>Seletores de Elementos</h1>
+            <input
+                  id="nome"
+                  data-nome
+                  type="text"
+                  name="name"
+                  class="nome"
+                  value="teste data-atribute"
+                  placeholder="Nome do cliente"
+            />
+            <button id="btn">Salvar</button>
+      </form>
+
+      <script>
+
+            const form = document.querySelector('form');
+
+            const ex1 = document.querySelector('[data-nome]').value;
+            const ex2 = document.querySelector('[placeholder="Nome do cliente"]').value;
+            const ex3 = document.querySelector('#nome').value;
+
+            console.log("\n ex1: data-nome => " + ex1);
+            console.log("\n ex2: [placeholder='Nome do Cliente'] => " + ex2);
+            console.log("\n ex1: seletor #id => " + ex3);
+
+      </script>
+</body>
+</html>
